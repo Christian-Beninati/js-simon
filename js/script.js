@@ -65,10 +65,13 @@ function play() {
   // Tempo rimanente in secondi
   let secondsLeft = 30;
   
+
   
   // Funzione per aggiornare il timer
   function updateTimer() {
-    console.log(`Tempo rimanente: ${secondsLeft} secondi`);
+  // Recupero l'elemento dal DOM
+    const countdownElement = document.getElementById("countdown");
+    countdownElement.innerText = secondsLeft;
 
     if (secondsLeft === 0) {
       clearInterval(timer); // Ferma il timer
@@ -114,6 +117,8 @@ function play() {
 
     secondsLeft--;
   }
+    // Aggiorno il timer immediatamente all'apertura della pagina
+    updateTimer();
 
   // Aggiorno il timer ogni secondo
   const timer = setInterval(updateTimer, 1000);

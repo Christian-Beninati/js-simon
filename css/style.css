@@ -6,3 +6,9 @@
 .hidden {
     display: none;
   }
+
+  #countdown{
+    font-size: 80px;
+  }
+
+  
