@@ -84,7 +84,7 @@ function play() {
         const userNumbers = [];
         for (let i = 0; i < 5; i++) {
           let enteredNumber = parseInt(prompt("Inserisci un numero tra 1 e 100:"));
-          while (isNaN(enteredNumber)) {
+          while (isNaN(enteredNumber )|| enteredNumber > 100) {
             enteredNumber = parseInt(prompt("Caratteri non validi! Inserisci un numero tra 1 e 100:"));
           }
           userNumbers.push(enteredNumber);
